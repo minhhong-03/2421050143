@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+   
+    <title>Bai 4</title>
+</head>
+<body>
+    <h1>Form tạo thông tin</h1>
+    <form>
+        <!-- Input nếu không truyền type thì -->
+        <!--type sẽ mặc định là text -->
+        <div>
+            <p><b>Họ và tên: </b></p>
+            <input type="text" name="hoVaTen">
+        </div>
+        <!-- được sử dụng để nhập 1 ô dữ liệu nhiều dòng dùng: textarea name-->
+         <div>
+            <p><b>Giới thiệu: </b></p>
+            <textarea name="gioiThieu"></textarea>
+         </div>
+         <div>
+            <p><b>Email</b></p>
+            <input type="email" name="email">
+         </div>
+    
+         <!-- số đầu tiên: 0
+         số tiếp theo: 9,3,6,8
+         8 số cuối: 0-9 -->
+         <!-- gợi ý định dạng cho người dùng: placeholder
+         kiểm tra định dạng hợp lệ: pattern -->
+         <div> 
+            <p><b>Số điện thoại:</b></p>
+            <input name="soDienThoai"
+            type="tel"
+            placeholder="Dạng số:123"
+            required
+            pattern="([0]{1}([9,3,6,8]{1})([0-9]{8}))" >
+         </div>
+         <!-- Cho phép người dùng nhập thông tin giới tính: radio -->
+         <div>
+            <p><b>Giới tính</b></p>
+            <input type="radio" name="gioiTinh" value="nam"> Nam<br>
+            <input type="radio" name="gioiTinh" value="nữ"> Nữ
+         </div>
+        <div>
+            <p><b>Sở thích</b></p>
+            Game:<input type="checkbox" name="soThich" value="game"><br>
+            Music:<input type="checkbox" name="soThich" value="music"><br>
+            Sport:<input type="checkbox" name="soThich" value="sport"><br>
+
+        </div>
+       
+        <!-- cho phép người dùng chọn 1 nội dung từ danh sách lựa chọn nằm trong datalist
+         có id trùng với id khai báo trong list :list -->
+        <div>
+            <p><b>Trình duyệt web hay sử dụng</b></p>
+               <input list="browsers">
+               <datalist id="browsers">
+                  <option value="Internet Explorer"></option>
+                  <option value="Firefox"></option>
+                  <option value="Chrome"></option>
+                  <option value="Opera"></option>
+                  <option value="Safari"></option>
+                  <option value="Cốc cốc"></option>            
+            </datalist>
+            <select name="browsers">
+                <option value="Internet Explorer">Internet Explorer</option>
+                <option value="Firefox">Firefox</option>
+                <option value="Chrome">Chrome</option>
+                <option value="Opera">Opera</option>
+                <option value="Safari">Safari</option>
+                <option value="Cốc cốc">Cốc cốc</option>  
+            </select>        
+        </div>
+        <!-- range được sử dụng để tạo ra 1 thanh kéo lấy giá trị 0-100 -->
+         <div>
+            0 <input type="range" id="a" value="50">100
+         </div>
+         <!-- button là các nút bấm -->
+        <div>
+            <input type="submit">
+            <button>click</button>
+            <input type="reset">
+        </div>
+        <!-- Tạo 1 khung có nội dung 1 trang web nào đó -->
+         <iframe
+          width="560"
+          height="315" 
+          src="https://www.youtube.com/embed/lK9rQKCrdkE?si=ml_HLgKehbzn2JFs" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen></iframe>
+
+    </form>
+    <MARQUEE>
+        <img src="../anh/1.jpg" width="100" height="100">
+    </MARQUEE>
+    <!-- thẻ chèn đa phương tiện -->
+    <audio controls>
+        <source src="" type=" ">
+    </audio>
+    <video controls width="..." height="...">
+        <source src="" type="">
+    </video>
+    <!-- một số ký tự đặc biệt:
+    dấu cách:&nbsp;
+    dấu <: %lt;
+    dấu >: &gt;
+    dấu &: &amp;
+    dấu": &quot; -->
+    
+</body>
+</html> 
