@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Trang đào tạo</title>
+<style>
+    p{
+        color:pink;
+    }
+    #ten-khoa{
+         color:green;
+    }
+    .ten-mon{
+        color:orange;
+    }
+    p.nhom{
+        color:red;
+    }
+    .khoi1{
+        background-color:green;
+    }
+    .khoi2{
+        background-color:yellow;
+        /* 1 giá trị: cách đều xung quanh = giá trị đó  */
+        /* 2 giá trị: giá trị đầu (trên dưới), giá trị 2 (trái, phải) */
+        /* 4 giá trị: giá trị 1 (trên), giá trị 2 (phải), giá trị 3 (dưới), giá trị 4 (trái) (theo thứ tự trên phải dưới trái) */
+        margin: 50px 200px 10px 100px;
+        /* padding: khoảng cách bên trong */
+        padding: 50px ;
+    }
+    .khoi3{
+        background-color:red;
+    }
+    .khoi4{
+        background-color:grey;
+        display: flex;
+        
+    }
+    .khoi5{
+        background-color:orange;
+        width: 50%;
+    }
+    .khoi6{
+        background-color:blue;
+        width: 50%;
+    }
+</style>
+<link rel="stylesheet" href="style.css" type="text/css">
+  
+</head>
+
+<body>
+    <h1 style="color: red">Trường Đại học Mỏ Địa chất </h1>
+    <p class="nhom">Nhóm 03</p>
+    <p>Truong dai hoc mo dia chat</p>
+    <div id="ten-khoa">Khoa CNTT</div>
+    <div id="ten-mon">Thiet ke ung dung web</div>
+    <div class="khoi1">Khối 1</div>
+    <div class="khoi2">Khối 2</div>
+    <div class="khoi3">Khối 3</div>
+
+
+    <div class="khoi4">
+        <div class="khoi5">Khối 5</div>
+        <div class="khoi6">Khối 6</div>
+    </div>
+    
+</body>
+</html>
