@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- Internal JavaScript -->
+    <script>
+        // in ra màn hình
+        document.writeln("Hello World! <br> ");
+        // Khai báo biến
+        var ten = "Minh Hồng <br>";
+        document.writeln(ten);
+        // Thay đổi giá trị của biến
+        ten = "Ly <br>";
+        document.writeln(ten);
+        // với kiểu dữ liệu là số kh cần nháy đôi
+        var namNay = 2026;
+        document.writeln(namNay );
+        // Phép toán
+        var soThuNhat = 10;
+        var soThuHai = 5;
+        var ketQua = 0;
+        // cộng +
+        document.writeln("<br> Ket qua soThu1 + soThu2 la : ")
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua);
+        //Trừ -
+        document.writeln("<br> Ket qua soThu1 - soThu2 la : ")
+        ketQua = soThuNhat - soThuHai;
+        document.writeln(ketQua);
+        //Nhân *
+        document.writeln("<br> Ket qua soThu1 * soThu2 la : ")
+        ketQua = soThuNhat * soThuHai;
+        document.writeln(ketQua);
+        // Chia /
+        document.writeln("<br> Ket qua soThu1 / soThu2 la : ")
+        ketQua = soThuNhat / soThuHai;
+        document.writeln(ketQua);
+        // % (chia lấy dư)
+        document.writeln("<br> Ket qua soThu1 % soThu2 la : ")
+        ketQua = soThuNhat % soThuHai;
+        document.writeln(ketQua);
+
+        
+        //++
+        document.writeln('<br>');
+        document.writeln(soThuNhat++);
+        document.writeln('<br>');
+        document.writeln(soThuNhat);
+
+        //--
+        //document.writeln('<br>');
+        //document.writeln(--soThuHai);
+
+        //+=
+        document.writeln('<br>');
+        soThuNhat += soThuHai;
+        document.writeln(soThuNhat);
+
+        // -=
+        document.writeln('<br>')
+        soThuNhat -= soThuHai;
+        document.writeln(soThuNhat);
+
+        // Nối các ký tự 
+        var ho = "Do";
+        document.writeln("<br>" + ho + " " +ten);
+        document.writeln("<br>");
+        // kiểm tra độ dài chuỗi
+        document.writeln(ho.length);
+        //kiểm tra kiểu dữ liệu của biến
+        document.writeln(typeof(ho));
+        document.writeln("<br>");
+
+        // Tìm vị trí xuất hiện trong chuỗi
+        var hoVaTen = "Le Thi Minh Hong";
+        document.writeln(hoVaTen.indexOf("Minh"));
+        document.writeln("<br>");
+        document.writeln(hoVaTen.includes("M")); 
+        document.writeln("<br>");
+        document.writeln(hoVaTen.startsWith("Le"));
+        // Thay thế kí tự
+        document.writeln("<br>")
+        document.writeln(hoVaTen.replace("Le","Nguyen" ));
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toUpperCase());
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toLowerCase());
+
+
+    </script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
