@@ -91,6 +91,143 @@
         document.writeln("<br>");
         document.writeln(hoVaTen.toLowerCase());
 
+        // Date
+        var homNay = new Date();
+        document.writeln("<br>");
+        document.writeln(homNay);
+
+        var ngay = new Date("03/30/2006");
+        document.writeln("<br>");
+        document.writeln(ngay);
+
+        // Lấy ra năm nay
+        var namNay = homNay.getFullYear();
+        document.writeln("<br>");
+        document.writeln(namNay);
+
+        // Lấy ra tháng (sẽ bị trừ đi 1)
+        var thangNay = homNay.getMonth() + 1;
+        document.writeln("<br>");
+        document.writeln(thangNay);
+
+        var ngayHomNay = homNay.getDate();
+        document.writeln("<br>");
+        document.writeln(ngayHomNay);
+
+        var thu = homNay.getDay() + 1;
+        document.writeln("<br>");
+        document.writeln(thu);
+
+        document.writeln("<br>");
+        document.writeln("Hôm nay là thứ " + thu  + " ngày " + ngayHomNay + " tháng " + thangNay + " năm " + namNay);
+
+        // Mảng
+        var mang = [1,2,3,4,5];
+        document.writeln("<br>");
+        document.writeln(mang[2]);
+        document.writeln("<br>");
+        document.writeln(mang.length);
+
+        document.writeln("<br>");
+        var mangTen = ["Minh Hồng", "Ngân", "Ly"];
+        document.writeln(mangTen[2]);
+       
+        document.writeln("<br>");
+        var mang = [1,2,3,4,5,"Minh Hồng", "Ngân", "Ly"];
+        document.writeln(mang[5]);
+
+        var d = mang.concat(mang, mangTen);
+        document.writeln("<br>");
+        document.writeln(d.join("-"));
+
+        // lấy ra phần tử cuối cùng trong mảng: pop
+        var d = mang.concat(mang, mangTen);
+        document.writeln("<br>");
+        document.writeln(d.pop());
+
+        // Thêm phần tử vào mảng
+         var d = mang.concat(mang, mangTen);
+        document.writeln("<br>");
+        d.push("Quang Anh");
+        document.writeln(d);
+
+        // Đảo ngược phần tử trong mảng
+        var d = mang.concat(mang, mangTen);
+        document.writeln("<br>");
+        document.writeln(mang.reverse());
+
+        //Object
+        
+        var thongTinSinhVien = {
+            ten: "Le Thi Minh Hong",
+            namSinh : 2006,
+            queQuan : {
+                thanhPho: "Phu Ly",
+                phuong: "Liem Tuyen",
+            }
+        };
+        document.writeln("<br>");
+        document.writeln(thongTinSinhVien.ten);
+        document.writeln("<br>");
+        document.writeln(thongTinSinhVien.queQuan.thanhPho);
+        tuoi = namNay - thongTinSinhVien.namSinh;
+        thongTinSinhVien.tuoi = tuoi;
+        // console.log(thongTinSinhVien);
+        //boolean: true nam / false nữ
+        document.writeln("<br>");
+        document.writeln(tuoi);
+
+        thongTinSinhVien.gioiTinh = true;
+
+        var danhSach = [
+            {
+            ten: "Do Huong Ly",
+            namSinh : 2006,
+            queQuan : {
+                thanhPho: "Ha Noi",
+                phuong: "Dong Anh",
+            }
+        },
+        {
+            ten: "Nguyen Phuong Ngan",
+            namSinh : 2006,
+            queQuan : {
+                thanhPho: "Thai Binh",
+                phuong: "Tien Hai",
+            }
+        }
+    ];
+        //document.writeln("<br>");
+        console.log(danhSach);
+
+        // so sánh == != > <
+        var so1 = 10;
+        var so2 = 10;
+        document.writeln("<br>");
+        document.writeln(so1 == so2);
+
+        // && ||
+        if(thu > 6){
+            document.writeln("Cuối tuần");
+        }else if(thu == 6){
+            document.writeln("<br>");
+            document.writeln("Sắp được nghỉ");
+        }
+        else{
+            document.writeln("<br>");
+            document.writeln("Đi học");
+        }
+
+        // bài tập kiểm tra số chẵn lẻ
+        var so = 5;
+        if( so % 2 == 0){
+            document.writeln("<br>");
+            document.writeln(so + " là số chẵn");
+        }else{
+            document.writeln("<br>");
+            document.writeln(so + " là số lẻ")
+        }
+
 
     </script>
     <!-- External JavaScript -->

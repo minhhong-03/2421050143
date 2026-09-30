@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title> Bài 2</title
+        <title> Bài 2</title>
     </head>
     <body>
         <h1> Bài 2</h1>
@@ -28,11 +28,12 @@
               định nghĩa tiêu đề bảng <caption>  -->
             <div>
                 <!-- dòng kẻ: border="1" -->
-                <table border="1">
+                <table border="1" width="100%">
                     <caption> Bảng thông tin sinh viên</caption>
                     <tr>
                         <th>STT</th>
-                        <th colspan="2">Họ và tên</th>                     
+                        <th colspan="2">Họ và tên</th>   
+                        <!-- gộp theo chiều ngang (nhiều cột) dùng colspan -->
                         <th>Mã sinh viên</th>
                         <th>Lớp</th>
                         <th>Khóa</th>
@@ -44,6 +45,7 @@
                         <td>2421050143</td>
                         <td>DCCTCT69_07</td>
                         <td rowspan="3"> 69</td>
+                        <!-- gộp theo chiều dọc(nhiều hàng) dùng rowspan -->
                     </tr>
                     <tr>
                         <td>2</td>
@@ -53,7 +55,6 @@
                         <td>DCCTCT69_07</td>
                      
                     </tr>    
-                    <!-- Gộp các hàng có đơn vị giống nhau dùng rowspan="" -->
                     <tr>
                         <td>3</td>
                         <td>Nguyễn</td>
