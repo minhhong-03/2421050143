@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function
+        //Không tham số
+        function sayHello(){
+            document.writeln("Hello");
+        }
+
+        sayHello();
+
+        //Có tham số
+        function sayHello2(ten){
+            document.write("<br> Xin chào bạn " + ten)
+        }
+        sayHello2("Minh Hồng");
+        sayHello2("Ly");
+        sayHello2("Ngân");
+        // Nhập vào 2 số bất kỳ sau đó tính tổng 2 số kết hợp function và hàm
+       
+        function tinhTong(a,b){
+            if(isNaN(a) == false && isNaN(b) == false){
+                document.writeln(a+b);
+                return a+b;
+            }
+        }
+        var soThuNhat=Number(prompt("Nhập số thứ 1:", ""));
+        var soThuHai=Number(prompt("Nhập số thứ 2:", ""));
+        document.writeln("<br>");
+        tinhTong(soThuNhat, soThuHai);
+        
+
+
+
+
+    </script>
+</body>
+</html>
