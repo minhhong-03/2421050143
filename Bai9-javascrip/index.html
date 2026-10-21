@@ -1,44 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <div>
+        Nhập điểm A: <input id="diemA" type="number">
+    </div>
+    <div>
+        Nhập điểm B: <input id="diemB" type="number">
+    </div>
+    <div>
+        Nhập điểm C: <input id="diemC" type="number">
+    </div>
+    <div>
+        <button onclick="tinhDiem()">Tính điểm</button>
+    </div>
+    <div>
+        Kết quả: <input id="ketQua" type="text">
+    </div>
+
+    <div>
+        Nhập năm sinh: <input id="namSinh" type="number">
+    </div>
+  
+    <div>
+        <button onclick="tinhTuoi()">Tính tuổi</button>
+    </div>
+    <div>Tuổi: <input id="tuoi" type="text">
+    </div>
+    <script>
+        function tinhTuoi(){
+            var namSinh = parseInt(document.getElementById("namSinh").value);
+            var namHienTai = new Date().getFullYear();
+            var tuoi = namHienTai - namSinh;
+
+            document.getElementById("tuoi").value = tuoi + " tuổi";
+        }
+
+
+        function tinhDiem() {
+            //diemA
+            var A = parseFloat(document.getElementById("diemA").value);
+            //diemB
+            var B = parseFloat(document.getElementById("diemB").value);
+            //diemC
+            var C = parseFloat(document.getElementById("diemC").value);
+
+            document.getElementById("ketQua").value = tinhDiemChu(A, B, C);
+
+
+        }
+
+    </script>
+
     <script>
         //function
         //Không tham số
-        function sayHello(){
+        function sayHello() {
             document.writeln("Hello");
         }
 
         sayHello();
 
         //Có tham số
-        function sayHello2(ten){
+        function sayHello2(ten) {
             document.write("<br> Xin chào bạn " + ten)
         }
         sayHello2("Minh Hồng");
         sayHello2("Ly");
         sayHello2("Ngân");
         // Nhập vào 2 số bất kỳ sau đó tính tổng 2 số kết hợp function và hàm
-       
-        function tinhTong(a,b){
-            if(isNaN(a) == false && isNaN(b) == false){
-                document.writeln(a+b);
-                return a+b;
+
+        function tinhTong(a, b) {
+            if (isNaN(a) == false && isNaN(b) == false) {
+                document.writeln(a + b);
+                return a + b;
             }
         }
-        var soThuNhat=Number(prompt("Nhập số thứ 1:", ""));
-        var soThuHai=Number(prompt("Nhập số thứ 2:", ""));
+        // var soThuNhat=Number(prompt("Nhập số thứ 1:", ""));
+        // var soThuHai=Number(prompt("Nhập số thứ 2:", ""));
         document.writeln("<br>");
         tinhTong(soThuNhat, soThuHai);
-        
 
+        // btvn 
+        // viết hàm tính điểm chữ dựa trên 3 đầu điểm(A, B, C)
+        // tổng = A*0.6 + B*0.3 + C*0.1 => diểm chữ tương ứng
+        function tinhDiemChu(A, B, C) {
+            var tong = A * 0.6 + B * 0.3 + C * 0.1;
+            var kp = "";
+            if (tong >= 9) {
+                kp = "A+";
+            } else if (tong >= 8.5) {
+                kp = "A";
+            } else if (tong >= 8) {
+                kp = "B+";
+            } else if (tong >= 7) {
+                kp = "B";
+            } else if (tong >= 6.5) {
+                kp = "C+";
+            } else if (tong >= 5.5) {
+                kp = "C";
+            } else if (tong >= 5) {
+                kp = "D+";
+            } else if (tong >= 4) {
+                kp = "D";
+            } else if (tong < 4){
+                kp = "F";
+            } else {
+                kp = "Diem khong hop le";
+            }
+            return kp;
+        }
+
+            //var A = Number(prompt("Nhập điểm A:"));
+            //var B = Number(prompt("Nhập điểm B:"));
+            //var C = Number(prompt("Nhập điểm C:"));
+
+            var tong = A * 0.6 + B * 0.3 + C * 0.1;
+            var diemChu = tinhDiemChu(A, B, C);
+
+            document.write("Điểm tổng kết: " + tong + "<br>");
+            document.write("Điểm chữ: " + diemChu);
+
+
+
+
+
+        // Chuyển chuỗi thành số: parseInt();
+        // parseInt("42")
+        // parseInt("42.33")
+        // parseFloat("42.33")
+        // 3+3+parseInt("3")
+        // Chuyển số thành chuỗi (auto):
+        // 3 + "3"
+
+        // Nhập vào năm sinh in ra tuổi
+        
 
 
 
     </script>
 </body>
+
 </html>
