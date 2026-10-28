@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ </title>
+    <style>
+        .video {
+            display: flex;
+            margin: auto;
+        }
+
+        .danh-sach {
+            display: flex;
+            width: 80%;
+            margin: 80px auto;
+            justify-content: space-between;
+        }
+
+        .anh {
+            width: 24%;
+            height: 100px;
+            background-color: aqua;
+
+            img {
+                width: 100%;
+            }
+        }
+        .ten{
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- màn xem -->
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/OMkHtGIEqtQ?si=3HNvcbjFSCC88nXg"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3 class="ten">ĐẾN KHI NÀO... MẶT TRỜI NGỪNG CHIẾU | Những Bản Hits Acoustic Nhạc Trẻ Chill Triệu View HOT TREND
+    </h3>
+    <div class="danh-sach">
+        <div class="anh" onclick="chonVid(1)">
+            <img src="denkhinao.png" alt="">
+            <p>ĐẾN KHI NÀO... MẶT TRỜI NGỪNG CHIẾU | Những Bản Hits Acoustic Nhạc Trẻ Chill Triệu View HOT TREND</p>
+        </div>
+        <div class="anh" onclick="chonVid(2)">
+            <img src="3phai6dung.png" alt="">
+            <p>3 PHẢI 6 ĐỪNG - QUÂN A.P (Official MV)</p>
+        </div>
+        <div class="anh" onclick="chonVid(3)">
+            <img src="choanhve.png" alt="">
+            <p> [AUDIO LYRICS] CHỜ ANH VỀ - B Ray x AMEE x Masew | Anh Trai "Say Hi" 2025</p>
+        </div>
+        <div class="anh" onclick="chonVid(4)">
+            <img src="neusaunaycothuongem.png" alt="">
+            <p> Sau Này Nếu Có Thương Em - Hương Ly | New Version</p>
+        </div>
+    </div>
+    <script>
+        var danhSachVid = [
+            {
+                id: 1,
+                ten: "ĐẾN KHI NÀO... MẶT TRỜI NGỪNG CHIẾU | Những Bản Hits Acoustic Nhạc Trẻ Chill Triệu View HOT TREND",
+                duongDanAnh: "denkhinao.png",
+                duongDanYouTube: "https://www.youtube.com/embed/CGE83Yox94c?si=eIz81flfjJs720H-"
+            },
+            {
+                id: 2,
+                ten: "3 PHẢI 6 ĐỪNG - QUÂN A.P (Official MV)",
+                duongDanAnh: "3phai6dung.png",
+                duongDanYouTube: "https://www.youtube.com/embed/INJuqE_34eQ?si=LSs6QiJdlV86dPMO"
+
+            },
+            {
+                id: 3,
+                ten: "[AUDIO LYRICS] CHỜ ANH VỀ - B Ray x AMEE x Masew | Anh Trai 'Say Hi' 2025",
+                duongDanAnh: "choanhve.png",
+                duongDanYouTube: "https://www.youtube.com/embed/Qr4tu2td5u8?si=YohaTkelam3Y1OEG"
+            },
+            {
+                id: 4,
+                ten: "Sau Này Nếu Có Thương Em - Hương Ly | New Version",
+                duongDanAnh: "neusaunaycothuongem.png",
+                duongDanYouTube: "https://www.youtube.com/embed/JnMLPWA92e4?si=y_OQV8MpMMZVe2yb"
+            }
+        ];
+        function chonVid(id) {
+            for (let i = 0; i < danhSachVid.length; i++) {
+                if (danhSachVid[i].id == id) {
+                    document.getElementsByClassName("ten")[0].innerHTML = danhSachVid[i].ten;
+                    document.getElementsByTagName("iframe")[0].src = danhSachVid[i].duongDanYouTube;
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
