@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             background-color: #2F2C38;
             Color: white;
 
         }
+
         .danh-sach-muc {
             /* cho lên cùng 1 dòng dùng display: flex  */
             display: flex;
@@ -20,40 +22,50 @@
             display: flex;
             /* gap khoảng cách các đối tượng ở trong  */
             gap: 20px;
-        }   
-        .danh-muc{
+        }
+
+        .danh-muc {
             /* background-color: black; */
             color: white;
-        } 
+        }
+
         .lien-ket-muc {
             color: #DBDBDD;
             /* bỏ gạch chân dùng text-decoration */
             text-decoration: none;
             font-weight: bold;
         }
-        header{
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .muc{
+
+        .muc {
             padding: 15px;
             border-radius: 25px;
 
         }
-        .muc:hover{
+
+        .muc:hover {
             background-color: gray;
         }
-        .logo{
 
+        .logo {
+            width: 85px;
+            padding: 0;
         }
-        .avata{
+
+        .avata {
             width: 50px;
         }
-        .dang-chon{
+
+        .dang-chon {
             background-color: #4E4B52;
         }
-        .banner{
+
+        .banner {
             background-color: white;
             width: 95%;
             /* height: 40vh; */
@@ -61,71 +73,84 @@
             border-radius: 20px;
 
         }
-        .banner-anh{
+
+        .banner-anh {
             width: 100%;
-            border-radius: 20px;
+            height: 500px;
+            border-radius: 20px
         }
-        .danh-sach-the-loai{
+
+        .danh-sach-the-loai {
             width: 95%;
             height: 20vh;
             margin: 20px auto;
 
         }
-        .phim{
+
+        .phim {
             display: flex;
             justify-content: space-between;
             gap: 10px;
         }
-        .phim-poster{
+
+        .phim-poster {
             width: 24%;
             height: 15vh;
             border-radius: 15px;
-            background-color: aliceblue ;
+            background-color: aliceblue;
         }
-        .danh-sach-nhan-vat{
+
+        .danh-sach-nhan-vat {
             display: flex;
             justify-content: space-between;
-            /* gap: 20px; */
+            width: 100%;
+            gap: 20px;
         }
-        .danh-sach-nhan-vat .phim{
+
+        .danh-sach-nhan-vat .phim {
             gap: 10px;
             display: flex;
             justify-content: space-between;
-           
+            width: 100%;
+
+
         }
-        .nhan-vat{
-            width: 210px;
-            height: 210px;
+
+        .nhan-vat {
+            width: 40%;
+            height: 25%;
             border-radius: 50%;
             margin: 0;
         }
-        .hai-huoc{
+
+        .hai-huoc {
             width: 24%;
             height: 15vh;
             border-radius: 15px;
-            background-color: aliceblue ;
-        }    
-        .hoat-hinh{
-            width: 24%;
-            height: 15vh;
-            border-radius: 15px;
-            background-color: aliceblue ;
+            background-color: aliceblue;
         }
 
+        .hoat-hinh {
+            width: 24%;
+            height: 15vh;
+            border-radius: 15px;
+            background-color: aliceblue;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="danh-muc">
             <ul class="danh-sach-muc">
-               <img class="logo" src="img/logo.png" alt="">
-               <li class="muc dang-chon"><a href="#" class="lien-ket-muc">Trang chủ</a></li>
-               <li class="muc"><a href="#" class="lien-ket-muc">Nhân vật</a></li>
-               <li class="muc"><a href="#" class="lien-ket-muc">Series</a></li>
-               <li class="muc"><a href="#" class="lien-ket-muc">Phim</a></li>
-               <li class="muc"><a href="#" class="lien-ket-muc">Mới & Phổ biến</a></li>
-               <li class="muc"><a href="#" class="lien-ket-muc">Netflix của tôi</a></li>
-               <li class="muc"><a href="#" class="lien-ket-muc">Duyệt tìm theo ngôn ngôn</a></li>
+                <img class="logo" src="img/logo.png" alt="">
+                <li class="muc dang-chon"><a href="#" class="lien-ket-muc">Trang chủ</a></li>
+                <li class="muc"><a href="#" class="lien-ket-muc">Nhân vật</a></li>
+                <li class="muc"><a href="#" class="lien-ket-muc">Series</a></li>
+                <li class="muc"><a href="#" class="lien-ket-muc">Phim</a></li>
+                <li class="muc"><a href="#" class="lien-ket-muc">Mới & Phổ biến</a></li>
+                <li class="muc"><a href="#" class="lien-ket-muc">Netflix của tôi</a></li>
+                <li class="muc"><a href="#" class="lien-ket-muc">Duyệt tìm theo ngôn ngôn</a></li>
             </ul>
         </nav>
         <div class="chuc-nang">
@@ -136,93 +161,111 @@
         </div>
 
     </header>
+    <!-- Nội dung chính trang -->
     <main>
-        <div class="banner">
+        <!-- Banner -->
+        <div onclick="xemTrailer()" class="banner">
             <img class="banner-anh" src="img/banner.jpg" alt="">
+        </div>
+        <!-- trailer -->
+        <div style="display:none; " class="banner">
+            <iframe class="banner-anh" src="https://www.youtube.com/embed/lyAv38kLJdo?si=YWTgnX074sbM7IfE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="danh-sach-the-loai">
             <div class="the-loai">
-                <div class="ten-the-loai"> 
-                    <h2>Có thể bạn chưa xem</h2></div>
+                <div class="ten-the-loai">
+                    <h2>Có thể bạn chưa xem</h2>
+                </div>
                 <div class="danh-sach-phim">
                     <div class="phim">
-                        <img src="img/anh28.jpg" class="phim-poster"></img>
-                        <img src="img/anh12.jpg" class="phim-poster"></img>
-                        <img src="img/anh9.jpg" class="phim-poster"></img>
-                        <img src="img/anh10.jpg" class="phim-poster"></img>
-                        <img src="img/anh11.jpg" class="phim-poster"></img>                        
+                        <img onclick="chonPhim(1)" src="img/anh28.jpg" class="phim-poster"></img>
+                        <img onclick="chonPhim(2)" src="img/anh12.jpg" class="phim-poster"></img>
+                        <img onclick="chonPhim(3)" src="img/anh9.jpg" class="phim-poster"></img>
+                        <img onclick="chonPhim(4)" src="img/anh10.jpg" class="phim-poster"></img>
+                        <img onclick="chonPhim(5)" src="img/anh11.jpg" class="phim-poster"></img>
                     </div>
                 </div>
             </div>
             <div class="the-loai">
-                <div class="ten-the-loai"> 
-                    <h2>Phim hài hước</h2></div>
+                <div class="ten-the-loai">
+                    <h2>Phim hài hước</h2>
+                </div>
                 <div class="danh-sach-phim-hai-huoc">
                     <div class="phim">
-                        <img src="img/anh29.jpg" class="hai-huoc"></img>
-                        <img src="img/anh5.jpg" class="hai-huoc"></img>
-                        <img src="img/anh6.jpg" class="hai-huoc"></img>
-                        <img src="img/anh7.jpg" class="hai-huoc"></img>
-                        <img src="img/anh8.jpg" class="hai-huoc"></img>                        
+                        <img onclick="chonPhim(6)" src="img/anh29.jpg" class="hai-huoc"></img>
+                        <img onclick="chonPhim(7)" src="img/anh5.jpg" class="hai-huoc"></img>
+                        <img onclick="chonPhim(8)" src="img/anh6.jpg" class="hai-huoc"></img>
+                        <img onclick="chonPhim(9)" src="img/anh7.jpg" class="hai-huoc"></img>
+                        <img onclick="chonPhim(10)" src="img/anh8.jpg" class="hai-huoc"></img>
                     </div>
                 </div>
             </div>
             <div class="the-loai">
-                <div class="ten-the-loai"> 
-                    <h2>Hoạt hình</h2></div>
+                <div class="ten-the-loai">
+                    <h2>Hoạt hình</h2>
+                </div>
                 <div class="danh-sach-phim-hoat-hinh">
                     <div class="phim">
-                        <img src="img/anh1.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh2.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh3.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh4.jpg" class="hoat-hinh"></img>   
-                        <img src="img/anh30.jpg" class="hoat-hinh"></img>                     
+                        <img onclick="chonPhim(11)" src="img/anh1.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(12)" src="img/anh2.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(13)" src="img/anh3.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(14)" src="img/anh4.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(15)" src="img/anh30.jpg" class="hoat-hinh"></img>
                     </div>
                 </div>
             </div>
             <div class="the-loai">
-                <div class="ten-the-loai"> 
-                    <h2>Mọi người đang xem</h2></div>
+                <div class="ten-the-loai">
+                    <h2>Mọi người đang xem</h2>
+                </div>
                 <div class="danh-sach-phim">
                     <div class="phim">
-                        <img src="img/anh13.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh14.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh15.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh16.jpg" class="hoat-hinh"></img>    
-                        <img src="img/anh31.jpg" class="hoat-hinh"></img>                      
+                        <img onclick="chonPhim(16)" src="img/anh13.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(17)" src="img/anh14.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(18)" src="img/anh15.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(19)" src="img/anh16.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(20)" src="img/anh31.jpg" class="hoat-hinh"></img>
                     </div>
                 </div>
             </div>
             <div class="the-loai">
-                <div class="ten-the-loai"> 
-                    <h2>Top 10 phim Trẻ em tại Việt Nam hôm nay</h2></div>
+                <div class="ten-the-loai">
+                    <h2>Top 10 phim Trẻ em tại Việt Nam hôm nay</h2>
+                </div>
                 <div class="danh-sach-phim">
                     <div class="phim">
-                        <img src="img/anh17.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh18.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh19.jpg" class="hoat-hinh"></img>
-                        <img src="img/anh20.jpg" class="hoat-hinh"></img>     
-                        <img src="img/anh32.jpg" class="hoat-hinh"></img>                      
+                        <img onclick="chonPhim(21)" src="img/anh17.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(22)" src="img/anh18.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(23)" src="img/anh19.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(24)" src="img/anh20.jpg" class="hoat-hinh"></img>
+                        <img onclick="chonPhim(25)" src="img/anh32.jpg" class="hoat-hinh"></img>
                     </div>
                 </div>
             </div>
             <div class="the-loai">
-                <div class="ten-the-loai"> 
-                    <h2>Nhân vật</h2></div>
-                <div class="danh-sach-nhan-vat"> 
+                <div class="ten-the-loai">
+                    <h2>Nhân vật</h2>
+                </div>
+                <div class="danh-sach-nhan-vat">
                     <div class="phim">
-                        <img src="img/anh21.jpg" class="nhan-vat"></img>
-                        <img src="img/anh22.jpg" class="nhan-vat"></img>
-                        <img src="img/anh23.jpg" class="nhan-vat"></img>
-                        <img src="img/anh24.jpg" class="nhan-vat"></img>        
-                        <img src="img/anh25.jpg" class="nhan-vat"></img>
-                        <img src="img/anh26.jpg" class="nhan-vat"></img>
-`                    </div>
+                        <img onclick="chonPhim(26)" src="img/anh21.jpg" class="nhan-vat"></img>
+                        <img onclick="chonPhim(27)" src="img/anh22.jpg" class="nhan-vat"></img>
+                        <img onclick="chonPhim(28)" src="img/anh23.jpg" class="nhan-vat"></img>
+                        <img onclick="chonPhim(29)" src="img/anh24.jpg" class="nhan-vat"></img>
+                        <img onclick="chonPhim(30)" src="img/anh25.jpg" class="nhan-vat"></img>
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    
-    
+    <script src="script.js"></script>
+
+
 </body>
+
 </html>
