@@ -50,15 +50,24 @@
         </div>
     </div>
    <?php
+        // Sử dụng include để nối 2 file php
+        include "connect.php";
+        session_start();
+
         // echo $_POST['tenDangNhap'];
         // echo $_POST['matKhau'];
         if(isset($_POST['tenDangNhap']) && isset($_POST['matKhau']) ){
             $tenDangNhap = $_POST['tenDangNhap'];
             $matKhau = $_POST['matKhau'];
-            if($tenDangNhap == "admin" && $matKhau == "123"){
-                session_start();
+
+            $sql = "SELECT * FROM nguoi_dung WHERE ten_dang_nhap = '$tenDangNhap' and mat_khau = '$matKhau'";
+
+            $result = mysqli_query($conn, $sql);
+            
+
+            if(mysqli_num_rows($result) > 0) {
                 $_SESSION['dangnhap'] = "thanhcong";
-                header("Location: trangchu.php");
+                header("Location: index.php");
             }else{
                 echo "Tên đăng nhập hoặc mât khẩu ko chính xác";
             }
