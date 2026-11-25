@@ -64,7 +64,7 @@
             <td><?php echo $row ['gioi_tinh']==true?"Nam":"Nữ" ?></td>
             <td> 
                 <a class="capnhat" href= "index.php?page_layout=capnhattaikhoan&id=<?php echo $row['id']?>">Cập nhật</a>
-                <a class="xoa" href = "xoataikhoan&id=<?php echo $row['id']?>">Xóa</a>
+                <a class="xoa" href = "index.php?page_layout=xoataikhoan&id=<?php echo $row['id']?>">Xóa</a>
             </td>
         </tr>  
         <?php

@@ -62,6 +62,25 @@
                 case 'xoataikhoan':
                 include 'xoataikhoan.php';
                 break;
+            case 'themdanhmuc':
+                include 'themdanhmuc.php';
+                break;
+            case 'capnhatdanhmuc':
+                include 'capnhatdanhmuc.php';
+                break;
+            case 'xoadanhmuc':
+                include 'xoadanhmuc.php';
+                break;
+            case 'themphim':
+                include 'themphim.php';
+                break;
+            case 'capnhatphim':
+                include 'capnhatphim.php';
+                break;
+            case 'xoaphim':
+                include 'xoaphim.php';
+                break;
+    
         
         }
     }
